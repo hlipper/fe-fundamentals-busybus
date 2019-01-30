@@ -1,13 +1,21 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
 
 body {
   background-color: #fff;
   font-size: 10px;
+  font-family: "system";
 
 }
-.nav {
+
+nav {
   position: fixed;
   top: 0px;
   top: 0em;
@@ -20,38 +28,41 @@ body {
   border-bottom: .1px;
   border-color: #BCBBC1;
   border-style: solid;
+
 }
 
 .location {
   position: fixed;
   top: 1.5em;
-  right: 2em;
+  right: 1.3em;
 }
 
 .back-arrow {
   position: fixed;
   top: 1.75em;
-  left: 1.5em;
+  left: 1.2em;
 }
 
-.nav h1{
+nav h1 {
   text-align: center;
-  font-family: sans-serif;
   font-size: 1.7em;
   font-weight: 600;
   color: #481919;
-  padding-top: 1em;
-  line-height: .5em;
+  line-height: 1.5em;
+  letter-spacing: -2.4%;
+  padding-top: .25em
+
 }
-.nav h2{
+
+nav h2 {
   text-align: center;
-  font-family: sans-serif;
   font-size: 1.5em;
   font-weight: 200;
   color: #8C8C8C;
-  padding-top: .45em;
+  letter-spacing: -1.6%;
 
 }
+
 .map {
   height: 160px;
   width: 100%;
@@ -59,93 +70,91 @@ body {
   background-image: url("washington_state.png");
   background-repeat: no-repeat;
   background-size: cover;
+
 }
+
 .nextbus {
   height: 120px;
   width: 100%;
   background-color: rgb(89,151,178, 20%);
-  border-top: .2px;
-  border-left: 0px;
-  border-right: 0px;
-  border-bottom: .2px;
-  border-color: #481919;
-  border-style: solid;
+
+
 }
+
 .nextbus-bus-route {
   display:inline-block;
-  padding-left: 1.8em;
+  padding-left: 3em;
+  padding-top: 1em;
 
 }
-.nextbus-bus-route h2{
+
+.nextbus-bus-route-name {
   text-align: left;
-  font-family: sans-serif;
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.7em;
+  font-weight: 800;
   color: #481919;
-  padding-top: .5em;
+  padding-top: 1.5em;
   line-height: .5em;
+  letter-spacing: -2.4%;
 
 }
-.nextbus-bus-route h3{
+
+.nextbus-bus-route-direction {
   text-align: left;
-  font-family: sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 200;
   color: #8C8C8C;
-  padding-top: .5em;
+  padding-top: .75em;
+  letter-spacing: -1.6%;
 
 }
 
 .nextbus-busnumber {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  font-family: sans-serif;
-  font-size: 2.2em;
-  font-weight: 600;
+  font-size: 3.2em;
+  font-weight: 800;
   color: #481919;
-  padding-left: .2em;
-  line-height: .2em;
-
-
+  padding-left: .5em;
+  letter-spacing: -2.41%;
 }
+
 .nextbus-time {
   display: inline-block;
-  width: 4em;
-  height: 1em;
-  font-family: sans-serif;
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: 2.5em;
+  font-weight: 800;
   color: #481919;
   float: right;
-  padding-top: 1em;
-  padding-left: .5em;
-  line-height: .2em;
+  padding-right: .8em;
+  padding-top: 1.75em;
+  letter-spacing: -2.4%;
 
 }
 
-.nextbus h1 {
-  font-family: sans-serif;
+.nextbus h2 {
   font-size: 1.5em;
   font-weight: 600;
   color: #481919;
-  padding-top: 1.5em;
-  padding-left: 1em;
+  padding-left: .5em;
+  padding-top: 1em;
+  letter-spacing: -2.4%;
+
 }
 
 .upnext {
   height: 60px;
   width: 100%;
   background-color: #fff;
+
 }
 
-.upnext h2 {
-  font-family: sans-serif;
+.upnext h3 {
   font-size: 1.5em;
   font-weight: 600;
   color: #481919;
   padding-top: 1.5em;
   padding-left: 1em;
+  letter-spacing: -2.4%;
+
 }
 
 .refresh {
@@ -155,6 +164,7 @@ body {
   bottom: 1.5em;
   height: 2em;
   width: 2em;
+
 }
 
 .bus-route {
@@ -162,7 +172,9 @@ body {
   padding-left: 7em;
   padding-right: .5em;
 
+
 }
+
 .bus {
   height: 58px;
   width: 100%;
@@ -172,68 +184,56 @@ body {
   border-right: 0px;
   border-bottom: .1px;
   border-color: #BCBBC1;
-  border-style: solid;
+  border-style: solid
+
 }
+
 .bus-busnumber {
   display: inline-block;
   width: 1em;
   height: 1em;
-  font-family: sans-serif;
   font-size: 2.4em;
   font-weight: 600;
   color: #ABABAB;
   padding-left: 1em;
-  padding-top: 1.5em;
-  line-height: .2em;
+  letter-spacing: -2.4%;
 
 }
+
 .bus-time {
   display: inline-block;
   width: 5em;
   height: 1em;
-  font-family: sans-serif;
   font-size: 2em;
   font-weight: 600;
   color: #ABABAB;
   float: right;
   padding-left: 1em;
-  padding-top: 1.7em;
+  padding-top: 1.75em;
   line-height: .2em;
-
+  letter-spacing: -2.4%;
 }
-.bus-time-outofservice {
-  display: inline-block;
-  width: 10em;
-  height: 4em;
-  font-family: sans-serif;
-  font-size: 1em;
-  font-weight: 300;
-  color: #ABABAB;
-  float: right;
-  padding-left: .5em;
-  padding-top: 2.5em;
-  line-height: .2em;
 
-}
-.bus h1{
+
+.bus-bus-route-name {
   text-align: left;
-  font-family: sans-serif;
   font-size: 1.6em;
   font-weight: 300;
   color: #481919;
   padding-top: 1em;
-  line-height: .5em;
-
+  line-height: .7em;
+  letter-spacing: -2.4%;
 }
-.bus h2{
+
+.bus-bus-route-direction {
   text-align: left;
-  font-family: sans-serif;
   font-size: 1.4em;
   font-weight: 200;
   color: #8C8C8C;
   padding-top: .5em;
-
+  letter-spacing: -1.6%;
 }
+
 .mybus {
   height: 58px;
   width: 100%;
@@ -244,60 +244,64 @@ body {
   border-bottom: .1px;
   border-color: #BCBBC1;
   border-style: solid;
+
 }
-.mybus h1{
+
+.mybus-bus-route-name {
   text-align: left;
-  font-family: sans-serif;
   font-size: 1.7em;
   font-weight: 600;
   color: #481919;
   padding-top: 1em;
   line-height: .5em;
+  letter-spacing: -2.4%;
 
 }
-.mybus h2{
+
+.mybus-bus-route-direction {
   text-align: left;
-  font-family: sans-serif;
   font-size: 1.5em;
   font-weight: 200;
   color: #8C8C8C;
   padding-top: .5em;
-
+  letter-spacing: -1.6%;
 }
+
 .mybus-busnumber {
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  font-family: sans-serif;
   font-size: 2.4em;
-  font-weight: 600;
+  font-weight: 800;
   color: #481919;
   float: left;
   padding-left: 1.5em;
   line-height: .2em;
   padding-top: 1.5em;
+  letter-spacing: -2.4%;
 
 }
+
 .mybus-time {
   display: inline-block;
   width: 5em;
   height: 1em;
-  font-family: sans-serif;
   font-size: 2em;
-  font-weight: 600;
+  font-weight: 800;
   color: #481919;
   float: right;
   padding-right: .5em;
-  padding-top: 1.4em;
+  padding-top: 1.75em;
   line-height: .2em;
   padding-left: 1em;
+  letter-spacing: -2.4%;
 
 }
+
 .mybus-route {
   display: inline-block;
-  padding-left: 6em;
+  padding-left: 3em;
 
 }
+
 .tab-bar {
   position: fixed;
   bottom: 0px;
@@ -311,6 +315,64 @@ body {
   border-bottom: 0px;
   border-color: #BCBBC1;
   border-style: solid;
+
+}
+
+.bus-busnumber-outofservice {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  font-size: 2.4em;
+  font-weight: 600;
+  color: #5997B2;
+  float: left;
+  padding-left: 1em;
+  line-height: .2em;
+  padding-top: 1.5em;
+
+}
+
+
+.bus-route-outofservice {
+  display: inline-block;
+  padding-left: 7.25em;
+
+}
+
+.bus-route-outofservice-name {
+  text-align: left;
+  font-size: 1.7em;
+  font-weight: 300;
+  color: #5997B2;
+  padding-top: 1em;
+  line-height: .5em;
+  letter-spacing: -2.4%;
+
+}
+
+.bus-route-outofservice-direction {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 200;
+  color: #8C8C8C;
+  padding-top: .5em;
+  letter-spacing: -1.6%;
+
+}
+
+.bus-time-outofservice {
+  display: inline-block;
+  width: 10em;
+  height: 4em;
+  font-size: 1em;
+  font-weight: 500;
+  color: #5997B2;
+  float: right;
+  padding-left: .5em;
+  padding-top: 2em;
+  line-height: .2em;
+  letter-spacing: -1.6%;
+
 }
 
 
@@ -320,15 +382,14 @@ body {
   width: 34%;
 
 }
+
 .tab-bar-route {
   display: inline-block;
   width: 33%;
   height: 2em;
   margin-top: .5em;
-  }
 
-
-
+}
 
 .tab-bar-search {
   display: inline-block;
